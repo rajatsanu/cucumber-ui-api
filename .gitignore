@@ -1,0 +1,9 @@
+*.project
+*.class
+*.classpath
+/target/
+*.idea
+/test-report/
+/bin/
+/lib/
+rajat.iml
