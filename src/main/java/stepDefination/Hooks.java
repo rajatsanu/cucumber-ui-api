@@ -7,6 +7,7 @@ import cucumber.api.java.en.Given;
 import framework.BaseTest;
 import framework.DriverUtil;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import utility.BrowserInteraction;
 import org.testng.annotations.BeforeClass;
