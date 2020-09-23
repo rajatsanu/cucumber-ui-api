@@ -1,6 +1,6 @@
 Feature: Test Cucumber Project
 
-  @Regression
+  @Regression1
   Scenario Outline:  Purchase pillow - "<case>" case
     Given  Navigate to "MidTrans" website
     When   Validate header of home page

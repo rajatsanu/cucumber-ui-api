@@ -1,5 +1,6 @@
 package apiModule;
 
+import com.cucumber.listener.Reporter;
 import framework.BaseTest;
 import org.apache.http.HttpResponse;
 import stepDefination.Hooks;
@@ -27,7 +28,6 @@ public class APIModule {
 		HttpResponse r1 = null ;
 		HttpResponse r2 = null ;
 		for(int i = 0; i < str1.length ; i++){
-			//System.out.println("Req1 : " + str1[i]);
 			r1 = baseTest.browerIntraction.onGET(str1[i].replace("\r",""));
 			if (r1.getStatusLine().getStatusCode() != 200) {
 				throw new RuntimeException("Failed : HTTP error code : "
@@ -36,8 +36,7 @@ public class APIModule {
 			BufferedReader br = new BufferedReader(
 					new InputStreamReader((r1.getEntity().getContent())));
 			String output = br.readLine();
-			//System.out.println("Req2 : " + str2[i]);
-			r2 = baseTest.browerIntraction.onGET(str1[i].replace("\r",""));
+			r2 = baseTest.browerIntraction.onGET(str2[i].replace("\r",""));
 			if (r2.getStatusLine().getStatusCode() != 200) {
 				throw new RuntimeException("Failed : HTTP error code : "
 						+ r2.getStatusLine().getStatusCode());
@@ -47,9 +46,11 @@ public class APIModule {
 			String output1 = br.readLine();
 			boolean msg = baseTest.browerIntraction.compareTwoJSON(output,output1);
 			if(msg){
-				System.out.println(str1[i]+ " is equals " + str2[i]);
+				Reporter.addStepLog(str1[i].replace("\r","")+ " is equals " + str2[i].replace("\r",""));
+				System.out.println(str1[i].replace("\r","")+ " is equals " + str2[i].replace("\r",""));
 			}else{
-				System.out.println(str1[i]+ " not equals " + str2[i]);
+				Reporter.addStepLog(str1[i].replace("\r","")+ " not equals " + str2[i].replace("\r",""));
+				System.out.println(str1[i].replace("\r","")+ " not equals " + str2[i].replace("\r",""));
 			}
 		}
 	}
