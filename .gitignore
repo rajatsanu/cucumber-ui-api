@@ -2,7 +2,7 @@
 *.class
 *.classpath
 /target/
-*.idea
+/.idea/
 /test-report/
 /bin/
 /lib/

@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ddb9f0b-5b51-4063-9fc1-b07333f479a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rajat.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/framework/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/framework/DriverUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageObject/HomePagePO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stepDefination/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stepDefination/Hooks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utility/Assertion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utility/BrowserInteraction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utility/ElementIntraction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/executable/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testClass/TC_01_Runner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Feature01.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,13 +27,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1hrvRq3M0yE2toHXzrvQgRRSvvM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/executable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="utility" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rajat.sanu\Work\rajat\src\main\resources\executable" />
+      <recent name="C:\Users\rajat.sanu\Work\rajat\src\test" />
+      <recent name="C:\Users\rajat.sanu\Work\rajat\src\main" />
       <recent name="C:\Users\rajat.sanu\Work\rajat" />
     </key>
   </component>
@@ -40,6 +62,49 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="TestNG.TC_01_Runner">
+    <configuration name="Feature: Feature01" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Feature01.feature" />
+      <option name="GLUE" value="stepDefination" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="rajat" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome" />
+      <option name="SUGGESTED_NAME" value="Feature: Feature01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TC_01_Runner" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="rajat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testClass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testClass" />
+      <option name="MAIN_CLASS_NAME" value="testClass.TC_01_Runner" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.TC_01_Runner" />
+        <item itemvalue="Cucumber java.Feature: Feature01" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -51,6 +116,14 @@
       <option name="presentableId" value="Default" />
       <updated>1600782019317</updated>
     </task>
+    <task id="LOCAL-00001" summary="First Commit">
+      <created>1600782482176</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600782482176</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -58,10 +131,24 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="TestNG">
+        <watch expression="DriverUtil.getProperty(url)" />
+        <watch expression="DriverUtil.getDriver()" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
