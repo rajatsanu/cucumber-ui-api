@@ -19,6 +19,10 @@ import cucumber.api.java.en.Given;
 import pageObject.HomePagePO;
 import utility.BrowserInteraction;
 
+/**
+ * Contains Step Defination of UI Scenario
+ * Author : Rajat
+ */
 public class HomePageSD {
 
 	protected BaseTest baseTest = Hooks.getBasetest();

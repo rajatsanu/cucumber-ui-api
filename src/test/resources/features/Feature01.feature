@@ -1,5 +1,7 @@
 Feature: Test Cucumber Project
 
+  #UI Automation Scenario
+  #Author : Rajat
   @Regression1
   Scenario Outline:  Purchase pillow - "<case>" case
     Given  Navigate to "MidTrans" website

@@ -13,6 +13,10 @@ import module.PaymentModule;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Contains Step Defination of API Scenario
+ * Author : Rajat
+ */
 public class API_SD {
 
 	protected BaseTest baseTest = Hooks.getBasetest();

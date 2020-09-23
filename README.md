@@ -14,3 +14,9 @@ Imp Notes:
 5. Page Object are in src\main\java\pageObject folder
 6. Utility classes are in src\main\java\utility folder
 7. Modules are kept in apiModule and module folder
+
+How to Run this project:
+1. Update maven dependecies.
+2. Go to runner file src\test\java\testClass\TC_01_Runner.java
+3. Run this file as testNg
+4. Extended report will get generate in target\cucumber-reports\report.html
