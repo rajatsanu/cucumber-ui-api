@@ -3,7 +3,7 @@ package utility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class ElementIntraction{
+public class ElementIntraction extends Utility{
 
     public void onClick(WebElement element){
         element.click();
