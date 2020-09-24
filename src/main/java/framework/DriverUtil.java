@@ -37,7 +37,7 @@ public class DriverUtil {
 				throw e;
 		}
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		//driver.manage().window().maximize();
+		driver.manage().window().maximize();
 	}
 
 	public static String getProperty(String property){

@@ -18,5 +18,6 @@ Imp Notes:
 How to Run this project:
 1. Update maven dependecies.
 2. Go to runner file src\test\java\testClass\TC_01_Runner.java
-3. Run this file as testNg
-4. Extended report will get generate in target\cucumber-reports\report.html
+3. In Config File src\main\resources\config.properties, write browser name in browser key. (like chrome, firefox)
+4. Run this file as testNg
+5. Extended report will get generate in target\cucumber-reports\report.html
