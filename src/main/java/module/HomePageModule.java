@@ -26,7 +26,7 @@ public class HomePageModule {
 	WebDriverWait wait = new WebDriverWait(DriverUtil.getDriver(),30);
 
 	public void validateHeader(){
-		homePagePO.headerLogoIsPresent();
+		baseTest.browerIntraction.isElementPresent(homePagePO.getElementHeaderLogo());
 	}
 
 	public void clickOnBuyNow(){

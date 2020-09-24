@@ -19,7 +19,7 @@ public class Hooks {
 
 	@Before
 	public void setup() throws Throwable {
-		System.out.println("----------Before Class----------");
+		//System.out.println("----------Before Class----------");
 		basetest = new BaseTest();
 	}
 
@@ -29,8 +29,7 @@ public class Hooks {
 
 	@After
 	public void end(){
-		System.out.println("----------After Class----------");
-		DriverUtil.getDriver().quit();
+		//System.out.println("----------After Class----------");
 	}
 
 	

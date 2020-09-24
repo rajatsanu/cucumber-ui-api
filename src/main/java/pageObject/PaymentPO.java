@@ -11,12 +11,10 @@ import utility.ElementIntraction;
 public class PaymentPO {
 
 	ElementIntraction elementIntraction = null ;
-	WebDriverWait wait = null ;
 
 	public PaymentPO(WebDriver driver){
 		PageFactory.initElements(driver, this);
 		elementIntraction = new ElementIntraction();
-		wait = new WebDriverWait(driver,30);
 	}
 
 	@FindBy(xpath="//a[@href='#/select-payment']")
@@ -47,42 +45,34 @@ public class PaymentPO {
 	private WebElement labelFailureMessage;
 
 	public void clickBtnCheckOutContinue(){
-		wait.until(ExpectedConditions.elementToBeClickable(btnCheckOutContinue));
 		elementIntraction.onClick(btnCheckOutContinue);
 	}
 
 	public void clickBtnCreaditCard(){
-		wait.until(ExpectedConditions.elementToBeClickable(btnCreaditCard));
 		elementIntraction.onClick(btnCreaditCard);
 	}
 
 	public void setInputCreditCard(String value){
-		wait.until(ExpectedConditions.elementToBeClickable(inputCreditCard));
 		elementIntraction.onSendKeys(inputCreditCard,value);
 	}
 
 	public void setInputExpiry(String value){
-		wait.until(ExpectedConditions.elementToBeClickable(inputExpiry));
 		elementIntraction.onSendKeys(inputExpiry,value);
 	}
 
 	public void setInputCVV(String value){
-		wait.until(ExpectedConditions.elementToBeClickable(inputCVV));
 		elementIntraction.onSendKeys(inputCVV,value);
 	}
 
 	public void clickbtnPayNow(){
-		wait.until(ExpectedConditions.elementToBeClickable(inputCVV));
 		elementIntraction.onClick(btnPayNow);
 	}
 
 	public void setInputBankOtp(String value){
-		wait.until(ExpectedConditions.elementToBeClickable(inputBankOtp));
 		elementIntraction.onSendKeys(inputBankOtp,value);
 	}
 
 	public void setBtnOk(){
-		wait.until(ExpectedConditions.elementToBeClickable(btnOkClick));
 		elementIntraction.onClick(btnOkClick);
 	}
 

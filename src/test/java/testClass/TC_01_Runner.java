@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeClass;
 import stepDefination.Hooks;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.DateFormat;
 
 
@@ -23,9 +24,15 @@ import java.text.DateFormat;
 		glue = "stepDefination",
 		tags={"@Regression1"})
 public class TC_01_Runner extends AbstractTestNGCucumberTests {
+	@BeforeClass
+	public static void before() throws IOException {
+		DriverUtil driver = new DriverUtil();
+	}
+
 	private static DateFormat FileReaderManager;
 	@AfterClass
 	public static void writeExtentReport() {
+		DriverUtil.getDriver().quit();
 		String reportConfigPath = System.getProperty("user.dir") + DriverUtil.getProperty("reportPath");
 		Reporter.loadXMLConfig(new File(reportConfigPath));
 		Reporter.setSystemInfo("User Name", System.getProperty("user.name"));

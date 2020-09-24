@@ -15,12 +15,10 @@ import utility.ElementIntraction;
 public class HomePagePO {
 
 	ElementIntraction elementIntraction = null ;
-	WebDriverWait wait = null ;
 
 	public HomePagePO(WebDriver driver){
 		PageFactory.initElements(driver, this);
 		elementIntraction = new ElementIntraction();
-		wait = new WebDriverWait(driver,30);
 	}
 
 	@FindBy(xpath="//a[text()='Coco']")
@@ -35,8 +33,8 @@ public class HomePagePO {
 	@FindBy(xpath="//div[@class='notification-wrapper']//span")
 	private WebElement textMsg;
 
-	public void headerLogoIsPresent(){
-		elementIntraction.elementIsPresent(headerLogo);
+	public WebElement getElementHeaderLogo(){
+		return headerLogo;
 	}
 
 	public void clickBtnBuyNow(){
@@ -44,7 +42,6 @@ public class HomePagePO {
 	}
 
 	public void clickBtnCheckOut() {
-		wait.until(ExpectedConditions.elementToBeClickable(btnCheckOut));
 		elementIntraction.onClick(btnCheckOut);
 	}
 
