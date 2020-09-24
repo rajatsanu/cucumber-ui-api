@@ -12,12 +12,21 @@ import stepDefination.Hooks;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Description : Methods of Payment page
+ */
 public class PaymentModule {
 
 	protected BaseTest baseTest = Hooks.getBasetest();
 	private PaymentPO paymentPO = new PaymentPO(DriverUtil.getDriver());
 	WebDriverWait wait = new WebDriverWait(DriverUtil.getDriver(),30);
 
+	/**
+	 * Description : Select Credit card and fill card number, expiry date
+	 *         cvv and bank otp
+	 * @param list
+	 * @throws InterruptedException
+	 */
 	public void paymentMethod(List<Map<String, String>> list) throws InterruptedException {
 		paymentPO.clickBtnCreaditCard();
 		paymentPO.setInputCreditCard(list.get(0).get("Card Number"));
@@ -30,11 +39,15 @@ public class PaymentModule {
 		paymentPO.setBtnOk();
 	}
 
-	public void validateMsg(String value){
+	/**
+	 * Decription : Validate failure message on Payment page
+	 * @param msg
+	 */
+	public void validateMsg(String msg){
 		baseTest.browerIntraction.switchToParentFrame();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("snap-midtrans")));
 		baseTest.browerIntraction.switchToFrameUsingId("snap-midtrans");
-		baseTest.browerIntraction.textEqual(paymentPO.getLabelFailureMessage(),value);
+		baseTest.browerIntraction.textEqual(paymentPO.getLabelFailureMessage(),msg);
 	}
 	
 

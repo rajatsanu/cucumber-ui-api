@@ -11,17 +11,29 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Description : Contains methods for API Testing
+ */
 public class APIModule {
 
 	protected BaseTest baseTest = Hooks.getBasetest();
 	public List<String> list = new ArrayList<String>();
 
+	/**
+	 * Description : Read text file and store data in list
+	 * @param file
+	 * @throws IOException
+	 */
 	public void readFile(String file) throws IOException {
 		String filePath = System.getProperty("user.dir")
 				+ "/src/test/resources/files/" + file ;
 		list.add(baseTest.browerIntraction.readFile(filePath));
 	}
 
+	/**
+	 * Desciption : from list, request API and compare response
+	 * @throws IOException
+	 */
 	public void compareResponse() throws IOException {
 		String[] str1 = list.get(0).split("\n");
 		String[] str2 = list.get(1).split("\n");

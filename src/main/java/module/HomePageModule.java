@@ -18,6 +18,9 @@ import utility.ElementIntraction;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Description : Method of Home page
+ */
 public class HomePageModule {
 
 	protected BaseTest baseTest = Hooks.getBasetest();
@@ -25,14 +28,23 @@ public class HomePageModule {
 	private PaymentPO paymentPO = new PaymentPO(DriverUtil.getDriver());
 	WebDriverWait wait = new WebDriverWait(DriverUtil.getDriver(),30);
 
+	/**
+	 * Description : Validate Home page header
+	 */
 	public void validateHeader(){
 		baseTest.browerIntraction.isElementPresent(homePagePO.getElementHeaderLogo());
 	}
 
+	/**
+	 * Description : Click on BUY now button
+	 */
 	public void clickOnBuyNow(){
 		homePagePO.clickBtnBuyNow();
 	}
 
+	/**
+	 * Description : Checkout and Proceed for payment
+	 */
 	public void proceedWithCheckout(){
 		homePagePO.clickBtnCheckOut();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("snap-midtrans")));
@@ -40,9 +52,13 @@ public class HomePageModule {
 		paymentPO.clickBtnCheckOutContinue();
 	}
 
-	public void validateMsg(String value){
+	/**
+	 * Decription : Validate success message on Home page
+	 * @param msg
+	 */
+	public void validateMsg(String msg){
 		baseTest.browerIntraction.switchToParentFrame();
-		baseTest.browerIntraction.textEqual(homePagePO.getMsgWebElement(),value);
+		baseTest.browerIntraction.textEqual(homePagePO.getMsgWebElement(),msg);
 	}
 
 
