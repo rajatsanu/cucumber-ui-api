@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>Dkatalyst</groupId>
-    <artifactId>rajat</artifactId>
+    <artifactId>java-cucumber-api-framework</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <build>
